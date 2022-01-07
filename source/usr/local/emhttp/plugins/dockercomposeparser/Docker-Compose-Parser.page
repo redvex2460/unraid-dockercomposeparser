@@ -1,0 +1,21 @@
+Menu="Utilities"
+Title="Docker Compose Parser"
+---
+
+<?php
+
+?>
+<p>Please paste here your docker-compose.yml</p>
+<form method="POST" action="/plugins/redvex2460.dockercomposeparser/include/Work.php" target="progressFrame">
+	<p>Whats the name of this compose?</p>
+	<input type="text" name="nwname"></input><br>
+	<textarea style="width: 80%;min-height: 250px;" name="data"></textarea><br>
+    <div>
+		<p>Do you want to create a new network for this compose?</p>
+		<select name="extranetwork">
+			<option>Yes</option>
+			<option>No</option>
+		</select>
+	</div>
+	<input type="submit" value="Save">
+</form>
