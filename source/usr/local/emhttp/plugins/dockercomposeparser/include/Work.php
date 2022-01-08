@@ -5,8 +5,8 @@
 	if($nwname == "")
 		$nwname = "Composed";
 	$data = $_POST["data"];
-	file_put_contents("./plugins/redvex2460.dockercomposeparser/include/data.yml", $data);
-	exec('cd ./plugins/redvex2460.dockercomposeparser/include && yq eval -o=j data.yml',$output);
+	file_put_contents("./plugins/dockercomposeparser/include/data.yml", $data);
+	exec('cd ./plugins/dockercomposeparser/include && yq eval -o=j data.yml',$output);
 	$content = implode($output);
 	$contentAsJson = json_decode($content);
 	$services = ((array)$contentAsJson->services);

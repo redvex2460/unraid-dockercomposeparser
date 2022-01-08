@@ -11,7 +11,7 @@ chmod -R 755 $TMP_DIR/$VERSION/
 rm $TMP_DIR/$VERSION/$BASE_DIR/$PLUGIN_NAME/README.md
 makepkg -l y -c y $TMP_DIR/$PLUGIN_NAME-$VERSION.txz
 md5sum $TMP_DIR/$PLUGIN_NAME-$VERSION.txz | awk '{print $1}' > $TMP_DIR/$PLUGIN_NAME-$VERSION.txz.md5
-rm -R $TMP_DIR/$VERSION/
+#rm -R $TMP_DIR/$VERSION/
 chmod -R 755 $TMP_DIR/*
 
 #rm -R $TMP_DIR
